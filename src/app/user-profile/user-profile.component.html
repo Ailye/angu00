@@ -1,0 +1,25 @@
+<div class='container-fluid'>
+  <form>
+    <ul>
+      <li>
+        name : {{User.name}}
+      </li>
+      <li>
+        firstname : {{User.firstName}}
+      </li>
+      <li [hidden]='!oui'>
+        age : {{User.age}}
+      </li>
+      <li>
+        <button (click)='oui=!oui'> afficher / masquer </button>
+      </li>
+      <li>
+        quote : <input name='fdp' [(ngModel)]="User.quote">
+        <p> magic : {{User.quote}} </p>
+      </li>
+      <li>
+        <img [src]="User.photo" [alt]="User.firstName" />
+      </li>
+    </ul>
+  </form>
+</div>
