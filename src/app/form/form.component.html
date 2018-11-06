@@ -1,0 +1,6 @@
+<form [formGroup]="myForm">
+  <label for="name">Name</label><input id='name' formControlName="name" />
+  <label for='prenom'>Lastname</label><input id='lastName' formControlName="prenom" />
+  <label for='age'>Age</label><input id='age' formControlName="age" />
+  <span *ngIf='myForm.controls.age.errors?.min'>Désolé, vous n'avez pas 18 ans</span>
+</form>
